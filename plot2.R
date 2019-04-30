@@ -19,8 +19,6 @@ consumption_200702 <- consumption_200702[c(8,1,2,3,4,5,6,7)]
 consumption_200702$DateTime <- as.POSIXct(consumption_200702$DateTime)
 
 #Create plot 2
+png('plot2.png', width=480, height=480)
 plot(consumption_200702$Global_active_power~consumption_200702$DateTime, type='l', xlab='', ylab='Global Active Power (kilowatts)')
-
-#Save plot 2 as png file
-dev.copy(png, 'plot2.png', width=480, height=480)
 dev.off()
