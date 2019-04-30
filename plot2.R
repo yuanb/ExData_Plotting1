@@ -13,6 +13,7 @@ consumption$Date <- as.Date(consumption$Date, "%d/%m/%Y")
 #Create subset for the date range we will use
 consumption_200702 <- subset(consumption, Date >= as.Date("2007-2-1") & Date <= as.Date("2007-2-2"))
 
+#combin Date and Time column
 consumption_200702$DateTime <- paste(consumption_200702$Date, consumption_200702$Time, sep=' ')
 consumption_200702 <- consumption_200702[,c(-1,-2)]
 consumption_200702 <- consumption_200702[c(8,1,2,3,4,5,6,7)]
