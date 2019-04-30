@@ -14,6 +14,6 @@ consumption$Date <- as.Date(consumption$Date, "%d/%m/%Y")
 consumption_200702 <- subset(consumption, Date >= as.Date("2007-2-1") & Date <= as.Date("2007-2-2"))
 
 #Create plot 1 
-png('plot2.png', width=480, height=480)
+png('plot1.png', width=480, height=480)
 hist(consumption_200702$Global_active_power, col='red', main="Global Active Power", xlab = "Global Active Power (kilowatts)")
 dev.off()
